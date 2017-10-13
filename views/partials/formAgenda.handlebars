@@ -1,0 +1,21 @@
+<div class="form-group">
+    <label for="name">Name</label>
+    <input name="name" type="text" class="form-control" id="name" placeholder="Name" {{#if contact}}value="{{contact.name}}"{{/if}}>
+</div>
+<div class="form-group">
+    <label for="email">Email address</label>
+    <input name="email" type="email" class="form-control" id="email" placeholder="Email" {{#if contact}}value="{{contact.email}}"{{/if}}>
+</div>
+<div class="form-group">
+    <label for="tel">Phone</label>
+    <input name="phone" type="tel" class="form-control" id="tel" placeholder="Phone" {{#if contact}}value="{{contact.phone}}"{{/if}}>
+</div>
+<div class="form-group">
+    <label for="email">Avatar</label>
+    {{#if contact}}
+        <p>
+            <img src="{{contact.avatar}}" alt="" style="width:150px;height:auto;">
+        </p>
+    {{/if}}
+    <input type="file" name="avatar" class="form-control" id="avatar" />
+</div>
